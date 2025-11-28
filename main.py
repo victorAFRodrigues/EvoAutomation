@@ -9,34 +9,19 @@ def local():
     EnvUpdate()
 
     # Le o arquivo json e disponibiliza os dados pela variavel Jdados
-    files = ["nf_produto.json", "nf_servico.json", "fornecedor.json", 'nf_produto_GOEVO.json']
-    file = f"database/dealernet/{files[3]}"
+    files = ["data.json", "data2.json"]
+    file = f"data/systemOrApplication_name/{files[3]}"
 
     with open(file, "r", encoding="utf-8") as file:
         Jdata = load(file)
 
     Jdata = Jdata["content"][0]
 
-    print(Jdata)
+    automation_source = Jdata["RPA_SOURCE"]
+    automation_parameters = Jdata["RPA_PARAMS"]
 
-    RPA_SOURCE = Jdata["RPA_SOURCE"]
-    RPA_PARAMS = Jdata["RPA_PARAMS"]
-
-    status, msg = Worker(RPA_SOURCE, RPA_PARAMS)
-    print(msg)   
-
-def test():
-    api = Api()
-    APP_DATA = api.getVariables('?Grupolelacteste/RPAManager/AtualizarVariaveis')
-
-    for key, value in {
-        "SEARCH_TIMEOUT": APP_DATA['searchTimeout'],
-        "SYSTEM":  APP_DATA['application']['system'],
-        "SYSTEM_URL":  APP_DATA['application']['systemUrl'],
-        "USER":  APP_DATA['application']['user'],
-        "PASSWORD":  APP_DATA['application']['password'],
-    }.items():
-        DotEnv().set(key, value)
+    status, message = Worker(automation_source, automation_parameters)
+    print(status, message)   
 
 def run(app):
     api = Api()
@@ -44,7 +29,7 @@ def run(app):
     while app.running:
         EnvUpdate()
         search_timeout = int(DotEnv().get('SEARCH_TIMEOUT'))
-        response = api.getTask("?Grupolelacteste/RPAManager/IniciarTarefa").json()["content"]
+        response = api.getTask("/IniciarTarefa").json()["content"]
 
         if not response:
             print(f"Nenhuma Task de automação foi encontrada. Tentando novamente em {search_timeout} segundos...\n")
@@ -61,7 +46,7 @@ def run(app):
             success, WorkerMsg = Worker(RPA_SOURCE, RPA_PARAMS)
 
             api.finishTask(
-                "?Grupolelacteste/RPAManager/FinalizarTarefa", 
+                "?/FinalizarTarefa", 
                 WorkerMsg,  
                 "00" if success else "01", 
                 RPA_GUID
