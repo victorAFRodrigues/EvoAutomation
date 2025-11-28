@@ -1,0 +1,32 @@
+x-rpa-base: &rpa-base
+  build:
+    context: ..
+    dockerfile: build/Dockerfile.dev
+  env_file: ../.env
+  volumes:
+    - ..:/app
+  working_dir: /app
+  command: python main.py
+  environment: &base-env
+    PYTHONUNBUFFERED: 1
+    CHROME_BIN: /usr/bin/google-chrome
+    CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
+    DOCKER_RUNNING: "true"
+  restart: unless-stopped
+
+services:
+  rpa_001:
+    <<: *rpa-base
+    container_name: rpa_001
+    shm_size: 512m # 1gb
+    environment:
+      <<: *base-env
+      RPA_EXECUTOR: SRV_RPA_001
+
+  rpa_002:
+    <<: *rpa-base
+    container_name: rpa_002
+    shm_size: 512m # 1gb
+    environment:
+      <<: *base-env
+      RPA_EXECUTOR: SRV_RPA_002

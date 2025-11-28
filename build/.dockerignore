@@ -1,0 +1,64 @@
+# .dockerignore - Reduz tamanho da imagem e aumenta segurança
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+htmlcov/
+
+# Ambientes virtuais
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Documentação
+README.md
+*.md
+docs/
+
+# Logs e dados temporários
+*.log
+*.tmp
+temp/
+tmp/
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Testes
+tests/
+test_*.py
+*_test.py

@@ -1,0 +1,25 @@
+services:
+  rpaExecutor01:
+    image: goevo/rpa:latest
+    container_name: GRPAE_01
+    env_file: ../.env
+    environment:
+      RPA_EXECUTOR: GRPAE_01
+      CHROME_BIN: /usr/bin/google-chrome
+      CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
+      DOCKER_RUNNING: "true"
+    shm_size: 750m # 1gb
+    restart: unless-stopped
+
+  rpaExecutor02:
+      image: goevo/rpa:latest
+      container_name: GRPAE_02
+      env_file: ../.env
+      environment:
+        RPA_EXECUTOR: GRPAE_02
+        CHROME_BIN: /usr/bin/google-chrome
+        CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
+        DOCKER_RUNNING: "true"
+      shm_size: 750m # 1gb
+      restart: unless-stopped
+

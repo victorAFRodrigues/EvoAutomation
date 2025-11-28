@@ -1,0 +1,147 @@
+{
+  "code": "200",
+  "status": "OK",
+  "errorcode": "00",
+  "errormsg": "OK",
+  "content": [
+    {
+      "RPA_GUID": "967b259c-1ddd-472c-9e97-a52615032b1a",
+      "RPA_SOURCE": "cadastrar_nf_servico",
+      "RPA_PARAMS": [
+        {
+          "Nome": "NUMERO_NF",
+          "Conteudo": "180895"
+        },
+        {
+          "Nome": "SERIE",
+          "Conteudo": "G"
+        },
+        {
+          "Nome": "DATA_EMISSAO",
+          "Conteudo": "06102025"
+        },
+        {
+          "Nome": "FORNECEDOR_COD",
+          "Conteudo": "1"
+        },
+        {
+          "Nome": "NATUREZA_OPERACAO",
+          "Conteudo": "18"
+        },
+        {
+          "Nome": "TIPO_DOCUMENTO",
+          "Conteudo": "36"
+        },
+        {
+          "Nome": "CONTA_GERENCIAL",
+          "Conteudo": "179"
+        },
+        {
+          "Nome": "DEPARTAMENTO",
+          "Conteudo": "1"
+        },
+        {
+          "Nome": "CONDICAO_PAGAMENTO",
+          "Conteudo": "57"
+        },
+        {
+          "Nome": "OBSERVACAO",
+          "Conteudo": "REV20 - REVIS?O DE 20 MIL KM - BOLETO 30 DD"
+        },
+        {
+          "Nome": "VALOR_TOTAL",
+          "Conteudo": "597,00"
+        },
+        {
+          "Nome": "CODIGO_VERIFICACAO",
+          "Conteudo": "4YXHZ803"
+        },
+        {
+          "Nome": "ITENS",
+          "Conteudo": [
+            {
+              "Nome": "item_avulso",
+              "Conteudo": "0"
+            },
+            {
+              "Nome": "descricao",
+              "Conteudo": "REV20 - REVIS?O DE 20 MIL KM"
+            },
+            {
+              "Nome": "quantidade",
+              "Conteudo": "1"
+            },
+            {
+              "Nome": "valor_unitario",
+              "Conteudo": "597.00"
+            },
+            {
+              "Nome": "valor_total",
+              "Conteudo": "597.00"
+            },
+            {
+              "Nome": "unidade",
+              "Conteudo": "unidade"
+            },
+            {
+              "Nome": "departamento",
+              "Conteudo": "0"
+            },
+            {
+              "Nome": "conta_gerencial",
+              "Conteudo": "0"
+            }
+          ]
+        },
+        {
+          "Nome": "PARCELAS",
+          "Conteudo": [
+            {
+              "Nome": "item",
+              "Conteudo": [
+                {
+                  "Nome": "data_vencimento",
+                  "Conteudo": "30102025"
+                },
+                {
+                  "Nome": "valor",
+                  "Conteudo": "597.00"
+                },
+                {
+                  "Nome": "tipo_titulo",
+                  "Conteudo": "128"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Nome": "RATEIO",
+          "Conteudo": [
+            {
+              "Nome": "item",
+              "Conteudo": [
+                {
+                  "Nome": "empresa",
+                  "Conteudo": "19"
+                },
+                {
+                  "Nome": "departamento",
+                  "Conteudo": "1"
+                },
+                {
+                  "Nome": "conta_gerencial",
+                  "Conteudo": "179"
+                },
+                {
+                  "Nome": "valor",
+                  "Conteudo": "597.00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

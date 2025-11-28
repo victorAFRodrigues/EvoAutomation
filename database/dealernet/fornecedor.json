@@ -1,0 +1,19 @@
+{
+  "code": "200",
+  "status": "OK",
+  "errorcode": "00",
+  "errormsg": "OK",
+  "content": [
+    {
+        "RPA_GUID":"967b259c-1ddd-472c-9e97-a52615032b1a",
+        "RPA_SOURCE":"validar_fornecedor",
+        "RPA_PARAMS": [
+            {
+                "Nome": "CNPJ",
+                "Conteudo": "68774017000130"
+            }
+        ]
+    }
+  ]
+}
+

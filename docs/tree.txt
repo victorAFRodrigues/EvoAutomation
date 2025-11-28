@@ -1,0 +1,60 @@
+├── .build/
+├── .venv/
+├── database/
+│   └── dealernet/
+│       ├── fornecedor.json
+│       ├── nf_produto.json
+│       └── nf_servico.json
+├── docs/
+│   ├── readme.md
+│   └── tree.txt
+├── modules/
+│   ├── __init__.py
+│   ├── automations/
+│   │   ├── __init__.py
+│   │   ├── automation_model/
+│   │   │   ├── __init__.py
+│   │   │   ├── helpers
+│   │   │   |   ├── __init__.py
+│   │   │   |   └── login.py
+│   │   │   └── automation_file.py
+│   │   └── dealernet/
+│   │       ├── __init__.py
+│   │       ├── helpers/
+│   │       │   ├── __init__.py
+│   │       │   ├── categoriza_produtos.py
+│   │       │   ├── importar_xml.py
+│   │       │   ├── login.py
+│   │       │   ├── preenche_capa_nf_produto.py
+│   │       │   ├── preenche_capa_nf_servico.py
+│   │       │   ├── preenche_form_pt1.py
+│   │       │   ├── preenche_item.py
+│   │       │   ├── preenche_parcelas.py
+│   │       │   ├── preenche_rateio.py
+│   │       │   ├── procura_fornecedor.py
+│   │       │   ├── seleciona_nf_xmltable.py
+│   │       │   └── seleciona_nota.py
+│   │       ├── cadastrar_nf_produto.py
+│   │       ├── cadastrar_nf_servico.py
+│   │       └── validar_fornecedor.py
+│   ├── core/
+|   |   ├── __init__.py
+│   │   ├── api.py
+│   │   ├── app.py
+│   │   ├── automation.py
+│   │   ├── updater.py
+│   │   └── worker.py 
+│   └── utils/
+│       ├── __init__.py
+│       ├── browser_automation.py
+│       ├── desktop_automation.py
+│       ├── general.py
+│       └── models.py
+├── public/
+│   └── icon/
+│       └── rpa_goevo.ico
+├── .env-example
+├── .gitignore
+├── GRPA.spec
+├── build.ps1
+└── requirements.txt
